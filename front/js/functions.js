@@ -28,7 +28,6 @@ function oneCheckboxOption(elem, cheboxArray) {
 
 /**
  * @param {Blob} file
- * @returns {ArrayBuffer}
  */
 function readFileAsync(file) {
   return new Promise((resolve, reject) => {
@@ -45,8 +44,8 @@ function readFileAsync(file) {
 }
 
 /**
- * @param {Blob} fileSrc
- * @returns {ArrayBuffer}
+ * @param {String} fileSrc
+ * @returns {Blob}
  */
 async function fileBlob(fileSrc) {
   let data = await fetch(fileSrc);
@@ -55,28 +54,21 @@ async function fileBlob(fileSrc) {
   return data;
 }
 
-/**
- * @param {ArrayBuffer} background
- * @param {ArrayBuffer} logo
- * @param {String} text
- * @param {Object} config
- * @param {String} url
- */
-async function api(background, logo, text = '', config, url) {
+async function api(background, logo, text = "", config, url) {
   if (!url) {
-    url = 'http://localhost:3003/meme';
+    url = "http://localhost:3003/meme";
   }
 
   if (!(background && logo)) {
-    return console.error('missing parameters');
+    return console.error("missing parameters");
   }
 
   const data = { background, logo, text, config };
 
   const response = await fetch(url, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
   });
