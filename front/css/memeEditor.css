@@ -1,0 +1,154 @@
+section[app] {
+    position: relative;
+    height: 570px;
+    width: 650px;
+    background-color: var(--app-background-color);
+}
+
+section[app] header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: var(--app-header-bg-color) ;
+    padding: 8px 10px 4px 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-top: -5px;
+}
+
+section[app] header button {
+    background: var(--app-header-button-color);
+    width: 38px;
+    height: 18px;
+    border-radius: 3px;
+    box-shadow: 0 0 0px 0.5px black;
+    cursor: pointer;
+    color: white;
+}
+
+section[app] header button:hover {
+    box-shadow: 0 0 5px 0.5px rgb(202, 9, 9);
+}
+
+section[app] > main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    box-shadow: inset 0 0 0px 1px var(--app-border-gray);
+    height: 460px;
+    width: 630px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+section[app] > main > label {
+    background-color: var(--app-background-color);
+    position: absolute;
+    top: 36px;
+    left: 25px;
+    display: inline-block;
+}
+
+section[complement] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 20px;
+}
+section[complement] > div:nth-child(5) {
+    grid-column: 2/2;
+    grid-row: 1/3;
+}
+
+section[complement] > div:last-child {
+    grid-column: 2/2;
+    grid-row: 2/3;
+}
+
+section[text] > textarea {
+    box-shadow: inset 0 0 0px 1px var(--app-border-gray);
+    padding: 5px;
+    font-size: 20px;
+    resize: none;
+}
+
+div.app-bg-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+}
+
+section[background] h3  {
+    margin-left: 10px;
+}
+
+div.app-bg-container > div  img {
+    width: 125px;
+    height: 100px;
+}
+
+section[logo] {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+section[logo] div img {
+    width: 60px;
+    height: 55px;
+}
+
+section[preview] {
+    position: relative;
+}
+
+section[preview] p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    top: 8px;
+    left: 35px;
+    width: 78%;
+    text-align: center;
+}
+
+img[previewBg] {
+    width: 250px;
+    height: 200px;
+}
+
+img[previewLogo] {
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    bottom: 40px;
+    left: 40px;
+}
+
+footer[actions] {
+    height: 60px;
+}
+
+footer[actions] button {
+    width: 100px;
+    height: 25px;
+    border-radius: 3px;
+    background-color: #E2E0E3;
+    cursor: pointer;
+    box-shadow: 0 0 0px 0.5px black;
+}
+
+footer[actions] button:hover {
+    box-shadow: 0 0 5px 0.5px rgb(19, 88, 248);
+}
+
+footer[actions] > progress {
+    display: none;
+    width: 80px;
+    height: 10px;
+    margin-top: 10px;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/memeEditor.css">
+        <link rel="stylesheet" href="./css/spiner.css">
+        <title>MEME GENERATE</title>
+    </head>
+
+    <body>
+
+        <!-- section windows login -->
+        <section login class="flex-column-center">
+            <img src="./img/avatar-login.png">
+            <div>
+                <div text>
+                    <span>Meme Maker</span>
+                    <p loginHideOnClick>mememaker@memeeditor.com</p>
+                </div>
+                <div loginHideOnClick formGroup class="center">
+                    <input size="25" type="password" value="123456" readonly>
+                    <button btnLogin class="desktop-icon-hover"> <i class="fa fa-arrow-right"></i> </button>
+                </div>
+                <div spiner>
+                    <div class="spiner">Carregando...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section desktop icons -->
+        <section loadDesktop desktop-icons class="flex-column-center">
+            <div trashIco class="desktop-icon-hover flex-column-center">
+                <img src="./img/trash-ico.png">
+                <span>Lixeira</span>
+            </div>
+
+            <div githubIco class="desktop-icon-hover flex-column-center">
+                <img src="./img/git-ico.png">
+                <span>GitHub</span>
+            </div>
+
+            <div memeEditorIco class="desktop-icon-hover flex-column-center">
+                <img src="./img/meme-ico.png">
+                <span>meme editor</span>
+            </div>
+            
+        </section>
+        
+        <!-- Meme generator aplication -->
+        <main memeEditorCt class="main-container-app center">
+            <section app>
+
+                <header>
+                    <h4>Web Meme Generator - v 1.0</h4>
+                    <button memeEditorBtnClose>&#x2716;</button>
+                </header>
+                
+                <main>
+
+                    <label>Meme Generate</label>
+
+                    <section complement>
+                        <div>
+                            <input id="opc1" type="checkbox">
+                            <label for="opc1">texto 1</label>
+                        </div>
+                        <div >
+                            <input id="opc5" type="checkbox">
+                            <label for="opc5">texto 2</label>
+                        </div>
+                        <div>
+                            <input id="opc3" type="checkbox">
+                            <label for="opc3">texto 3</label>
+                        </div>
+                        <div >
+                            <input id="opc2" type="checkbox">
+                            <label for="opc2">texto 4</label>
+                        </div>
+                        <div>
+                            <input id="opc4" type="checkbox">
+                            <label for="opc4">texto 5</label>
+                        </div>
+                        <div>
+                            <input id="opc6" type="checkbox">
+                            <label for="opc6">texto 6</label>
+                        </div>
+                    </section>
+
+                    <section text>
+                        <h3>TEXTO</h3>
+                        <textarea userText rows="4" cols="26"></textarea>
+                    </section>
+
+                    <section background>
+                        <h3>PLANO DE FUNDO</h3>
+                        <div class="app-bg-container">
+                            <div>
+                                <input id="bgImg1" type="checkbox">
+                                <img src="img/fundo-1.png">
+                            </div>
+                            <div>
+                                <input id="bgImg2" type="checkbox" checked>
+                                <img src="img/fundo-2.png">
+                            </div>
+                            <div>
+                                <input id="bgImg3" type="checkbox">
+                                <img src="img/fundo-3.jpg">
+                            </div>
+                            <div>
+                                <input id="bgImg4" type="checkbox">
+                                <img src="img/fundo-4.jpg">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section misc>
+                        <h3> LOGO </h3>
+                        <section logo>
+                            <div>
+                                <input id="lgImg1" type="checkbox">
+                                <img src="img/logo-1.png">
+                            </div>
+                            <div>
+                                <input id="lgImg2" type="checkbox" checked>
+                                <img src="img/meme-ico.png">
+                            </div>
+                            <div>
+                                <input id="lgImg3" type="checkbox">
+                                <img src="img/logo-3.png">
+                            </div>
+                        </section>
+
+                        <h3>PREVIEW</h3>
+                        <section class="center" preview>
+                            <img previewBg >
+                            <p previewText></p>
+                            <img previewLogo src="">
+                        </section>
+                    </section>
+
+                </main>
+
+                <footer actions class="flex-column-center">
+                    <button generate>Gerar</button>
+                    <a src="" download></a>
+                    <progress>
+                </footer>
+
+            </section>
+
+        </main>
+        <!-- End of meme generator aplication -->
+
+       <!--  Footer windows task bar -->
+        <footer loadDesktop>
+
+            <div misc class="center">  
+                <div startMenu class="task-bar-hover task-bar-item center">
+                    <i class="fa fa-windows"></i>
+                </div>
+                <div search>
+                    <i class="fa fa-search fa-rotate-90"></i>
+                    <input size="43" type="text" placeholder="Digite aqui para pesquisar" readonly>
+                </div>
+                <div class="task-bar-item task-bar-hover center">
+                    <img cortana src="./img/cortana.png" alt=""  >
+                </div>
+                <div class="task-bar-item task-bar-hover center">
+                    <img fileExp src="./img/file-exp.png" alt="" >
+                </div>
+            </div>
+
+            <div statusBar>
+                <div icons class="center">
+                    <div class="task-bar-hover task-bar-item center">
+                        <i class="fa fa-chevron-up"></i>
+                    </div>
+                    <div class="task-bar-hover task-bar-item center">
+                        <i class="fa fa-battery-quarter"></i>
+                    </div>
+                    <div class="task-bar-hover task-bar-item center">
+                        <span>POR</span>
+                    </div>
+                </div> 
+                <div date class="task-bar-hover flex-column-center">
+                    <span> 00:00 </span>
+                    <span> 99/99/999 </span>
+                </div>
+                <div showDesktop class="task-bar-hover"></div>
+            </div>
+
+        </footer>
+
+        <script src="./js/functions.js"></script>
+        <script src="./js/basic.js"></script>
+        <script src="./js/memeEditor.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+
+</html>

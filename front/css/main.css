@@ -1,0 +1,241 @@
+/* Variables */
+:root {
+  --default-text-color: rgb(27, 27, 27);
+  --body-bg-img: url(../img/bg.jpg);
+  --body-footer-bg-color: #202325;
+  --body-footer-text-color: #fff;
+  --app-header-bg-color: #aec8e3;
+  --app-header-button-color: linear-gradient(
+    to bottom,
+    rgba(244, 121, 68, 1) 35%,
+    rgba(168, 50, 35, 1) 100%
+  );
+  --app-background-color: rgb(212, 209, 211);
+  --app-border-gray: rgb(128, 128, 128);
+  --app-hover-gray: rgba(255, 255, 255, 0.253);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  outline: none;
+  border: none;
+}
+
+*[spiner] {
+  display: none;
+}
+
+*[loadDesktop] {
+  display: none;
+}
+
+/* classes */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column-center {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.task-bar-hover:hover {
+  background-color: var(--app-border-gray);
+}
+
+.desktop-icon-hover:hover {
+  background-color: var(--app-hover-gray);
+  box-shadow: inset 0 0 1px 1px var(--app-border-gray);
+}
+
+/* elements */
+body {
+  height: 100vh;
+  background-image: var(--body-bg-img);
+  background-size: cover;
+}
+
+section[login] {
+  padding-top: 130px;
+  text-align: center;
+  color: var(--body-footer-text-color);
+}
+
+section[login] img {
+  width: 200px;
+}
+
+div[text] span {
+  display: block;
+  font-size: 3em;
+  letter-spacing: 2px;
+  font-weight: 100;
+  font-family: "Segoe UI";
+}
+
+div[formGroup] {
+  height: 35px;
+  margin-top: 30px;
+}
+
+section[login] > div > div > input {
+  padding-left: 5px;
+  font-size: 20px;
+  height: 100%;
+  border: 1px solid var(--app-border-gray);
+}
+
+section[login] button {
+  border: 1px solid var(--app-border-gray);
+  background-color: rgba(97, 97, 97, 0.493);
+  width: 35px;
+  height: 98%;
+  color: var(--body-footer-text-color);
+  cursor: pointer;
+}
+
+main.main-container-app {
+  display: none;
+  height: 90vh;
+}
+
+section[desktop-icons] {
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  height: 240px;
+  display: none;
+  justify-content: space-between;
+}
+
+section[desktop-icons] > div {
+  width: 100px;
+  padding: 5px;
+  color: var(--body-footer-text-color);
+  cursor: default;
+}
+
+section[desktop-icons] > div[trashIco] > img {
+  width: 35px;
+}
+
+section[desktop-icons] img {
+  height: 40px;
+  width: 43px;
+}
+
+section[desktop-icons] span {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+/* windows work bar */
+body > footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--body-footer-bg-color);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 43px;
+  color: var(--body-footer-text-color);
+}
+
+div[startMenu] {
+  width: 50px;
+  height: 100%;
+}
+
+div[startMenu]:hover {
+  color: rgb(28, 106, 250);
+}
+
+div.task-bar-item {
+  height: 100%;
+  width: 47px;
+}
+
+div[misc] div[search] {
+  position: relative;
+  height: 100%;
+}
+
+div[misc] div[search] i {
+  -webkit-text-stroke: 1.1px white;
+  color: rgb(36, 36, 36);
+  font-size: 20px;
+  position: absolute;
+  left: 15px;
+  bottom: 13px;
+}
+
+div[misc] > div[search] > input {
+  border: 1px solid var(--app-border-gray);
+  padding-left: 10px;
+  height: 100%;
+}
+
+div[misc] div[search] input:hover {
+  box-shadow: inset 0 0 3px 1px var(--app-border-gray);
+}
+
+div[misc] div[search] input::placeholder {
+  color: var(--default-text-color);
+  padding-left: 30px;
+  font-size: 15px;
+}
+
+footer div[misc] img {
+  height: 25px;
+}
+
+footer > div[misc] > div > img[cortana] {
+  width: 18px;
+  height: 18px;
+}
+
+div[startMenu] i {
+  font-size: 18px;
+}
+
+div[statusBar] {
+  display: flex;
+  justify-content: flex-end;
+  width: 200px;
+  font-size: 12px;
+  cursor: default;
+}
+
+div[showDesktop] {
+  width: 8px;
+  border-left: 1px solid var(--app-border-gray);
+}
+
+div[date] {
+  justify-content: space-around;
+  padding: 2px 10px;
+}
+
+div[icons] {
+  justify-content: space-around;
+}
+
+div[icons] div {
+  width: 32px;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    display: none;
+  }
+}
