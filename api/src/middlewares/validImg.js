@@ -14,18 +14,15 @@ const validImg = (req, res, next) => {
   }
 
   try {
-    bg.split(',');
-    lg.split(',');
+    const [bgType, bgData] = bg.split(',');
+    const [logoType, logoData] = lg.split(',');
   } catch (err) {
     res.status(400).json({
       error:
         'Check if the image type is present, example: data:image/png;base64,...',
     });
   }
-
-  const [bgType, bgData] = bg.split(',');
-  const [logoType, logoData] = lg.split(',');
-
+  
   if (!(validExtension(bgType) && validExtension(logoType))) {
     return res.status(400).json({
       error: 'invalid image extension',
