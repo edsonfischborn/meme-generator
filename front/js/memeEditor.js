@@ -184,3 +184,9 @@ function refreshPreview() {
   previewLogo.src = globalLogoSrc;
   previewBg.src = globalBackgroundSrc;
 }
+
+// init
+setInterval(() => {
+  refreshPreview();
+  refreshDesktopDate(); // basic.js
+}, 300);
